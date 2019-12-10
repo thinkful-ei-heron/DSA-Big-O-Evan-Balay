@@ -74,4 +74,111 @@
  * then returns the array with the new values
  */
 
+
+
+//  #6
+
+function naiveSearch(array, item) {
+  for (let i = 0; i < array.length; i++) {
+      if (array[i] === item) {
+          return i;
+      }
+  }
+}
+
+// answer: Linear - it will loop through the array until the value matches the item value.
+
+
+
+// #7
+
+function createPairs(arr) {
+  for (let i = 0; i < arr.length; i++) {
+      for(let j = i + 1; j < arr.length; j++) {
+          console.log(arr[i] + ", " +  arr[j] );
+      }
+  }
+}
+
+// answer: Polynomial - it loops through the same data array twice.
+
+
+
+// #8
+
+function compute(num) {
+  let result = [];
+  for (let i = 1; i <= num; i++) {
+
+      if (i === 1) {
+          result.push(0);
+      }
+      else if (i == 2) {
+          result.push(1);
+      }
+      else {
+          result.push(result[i - 2] + result[i - 3]);
+      }
+  }
+  return result;
+}
+
+// Answer: Linear - if the 
+
+
+// #9
+
+function efficientSearch(array, item) {
+  let minIndex = 0;
+  let maxIndex = array.length - 1;
+  let currentIndex;
+  let currentElement;
+
+  while (minIndex <= maxIndex) {
+      currentIndex = Math.floor((minIndex + maxIndex) / 2);
+      currentElement = array[currentIndex];
+
+      if (currentElement < item) {
+          minIndex = currentIndex + 1;
+      }
+      else if (currentElement > item) {
+          maxIndex = currentIndex - 1;
+      }
+      else {
+          return currentIndex;
+      }
+  }
+  return -1;
+}
+
+// Logarithmic because the data set shriks each time it's run
+
+
+
+// #10
+
+function findRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+// answer: constant - always returns one random number.
+
+
+// #11
+
+function isWhat(n) {
+  if (n < 2 || n % 1 != 0) {
+      return false;
+  }
+  for (let i = 2; i < n; ++i) {
+      if (n % i == 0) return false;
+  }
+  return true;
+}
+
+// answer: Linear - checks if n is a number greater than 2. If its even it returns false, if its true it returns true.
+
+
+
+// #12 Tower of Hanoi
  
