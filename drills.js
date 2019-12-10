@@ -238,3 +238,13 @@ function powerCalculator(base, exp) {
   console.log(powerCalculator(100, 2));
 
 
+// #3
+
+function reverseString(str) {
+    let results = []
+    for(let i = str.length - 1; i >= 0; i--) {
+      results.push(str[i])
+    }
+    return results.join('')
+  }
+  reverseString('dog')
