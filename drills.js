@@ -183,16 +183,58 @@ function isWhat(n) {
 // #12 Tower of Hanoi
 
 function TOH(num, source, dest, temp) {
-    if (num === 1) {
-        return print(source, dest);
-    }
-
+    if (num >= 1) {
     
 
+    TOH(num - 1, source, temp, dest);
+    print(source, dest);
+    TOH(num - 1, temp, dest, source);
+    
+    }
+  return 
 }
 
 function print(source, dest) {
     console.log(`Moving from ${source} => ${dest}`)
 }
 
-TOH(3, A, C, B);
+TOH(3, A, B, C);
+
+// after 7 recursive calls, the top 3 disks are on the destination  pole while the 
+// remainder of disks are on the starting pole.
+
+// 3 disk puzzle = 7 moves
+// 4 disk puzzle = 15 moves
+// 5 disk puzzle = 31 moves
+// runtime of algorithm - polynomial O(n^2)
+
+
+// Iterative version of recursive drills 1-7
+
+// #1
+
+function countingSheep(num) {
+    for (let i = num; i >= 0; i--) {
+      if (i > 0) {
+        console.log(i + ': Another sheep jumps over the fence')
+      } else {
+        console.log(i + ': All sheep jumped over the fence')
+      }
+    }
+}
+
+console.log(countingSheep(3));
+
+// #2
+
+function powerCalculator(base, exp) {
+    let power = 1;
+    for (let i = 1; i <= exp; i++) {
+      power = power * base
+    }
+    return power
+  }
+  
+  console.log(powerCalculator(100, 2));
+
+
