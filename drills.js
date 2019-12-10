@@ -248,3 +248,17 @@ function reverseString(str) {
     return results.join('')
   }
   reverseString('dog')
+
+
+// #4
+
+function triangle(n) {
+    let number = 0
+    for(let i = 1; i <= n; i++) {
+      number += i
+    }
+    return number
+  }
+  console.log(triangle(3))
+
+  
