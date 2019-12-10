@@ -181,4 +181,18 @@ function isWhat(n) {
 
 
 // #12 Tower of Hanoi
- 
+
+function TOH(num, source, dest, temp) {
+    if (num === 1) {
+        return print(source, dest);
+    }
+
+    
+
+}
+
+function print(source, dest) {
+    console.log(`Moving from ${source} => ${dest}`)
+}
+
+TOH(3, A, C, B);
