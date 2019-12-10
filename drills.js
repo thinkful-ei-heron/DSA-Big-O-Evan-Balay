@@ -9,7 +9,7 @@
  * people have the same breed as your dog. You stand up and yell out, who here has a golden retriever and would 
  * like to be a playdate for my golden. Someone yells - "I do, be happy to bring him over"
  * 
- * answer: constant because you are asking all 15 people once "who has the same breed of dog"
+ * answer: constant because you are asking all 15 people once "who has the same breed of dog"   O(1)
  * 
  * #2
  * 
@@ -20,7 +20,7 @@
  * and the next until you find someone who has a golden or there is no one else to ask.
  * 
  * answer: linear because you are asking each person once if they have the same breed. if the number of 
- * people grows, the amount of times you ask will grow proportionately.
+ * people grows, the amount of times you ask will grow proportionately. O(n)
  * 
  * 
  */
@@ -38,7 +38,7 @@
 };
 
 /**
- * answer: constant - value gets evaluated once, no matter how big or small value is. 
+ * answer: constant - value gets evaluated once, no matter how big or small value is. O(1)
  */
 
  /**
@@ -55,7 +55,7 @@
     return false;
 }
 /**
- * answer: linear - each array gets evaluated one time through.
+ * answer: linear - each array gets evaluated one time through. WRONG - polynomial (O(n^2))
  */
 
  /**
@@ -71,7 +71,7 @@
 
 /**
  * answer: linear - the for loop loops through the length of the array once and 
- * then returns the array with the new values
+ * then returns the array with the new values O(n)
  */
 
- 
+
