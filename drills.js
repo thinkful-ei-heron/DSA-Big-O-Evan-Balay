@@ -261,4 +261,44 @@ function triangle(n) {
   }
   console.log(triangle(3))
 
+  // #5
+
+  function stringSplitter(str, separator) {
+    let strArr = str.split(separator);
+    return strArr;
+  }
   
+  console.log(stringSplitter('02/07/1992', '/'));
+
+  // #6
+
+  function fib(num) {
+    let result = [];
+      for (let i = 1; i <= num; i++) {
+  
+          if (i === 1) {
+              result.push(1);
+          }
+          else if (i == 2) {
+              result.push(1);
+          }
+          else {
+              result.push(result[i - 2] + result[i - 3]);
+          }
+      }
+      return result.pop();
+  }
+  
+  console.log(fib(3))
+
+  // #7 
+
+  function factorial(num) {
+    let result = 1;
+    for (let i = 1; i <= num; i++) {
+      result *= i
+    }
+    return result;
+  }
+  
+  console.log(factorial(5))
