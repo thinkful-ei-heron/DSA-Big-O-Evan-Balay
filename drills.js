@@ -211,7 +211,7 @@ TOH(3, A, B, C);
 
 // Iterative version of recursive drills 1-7
 
-// #1
+// #1 ----  iterative runtime = linear   ----    recursive runtime = linear
 
 function countingSheep(num) {
     for (let i = num; i >= 0; i--) {
@@ -225,7 +225,7 @@ function countingSheep(num) {
 
 console.log(countingSheep(3));
 
-// #2
+// #2 ---- iterative runtime = linear   ----    recursive runtime = linear
 
 function powerCalculator(base, exp) {
     let power = 1;
@@ -238,7 +238,7 @@ function powerCalculator(base, exp) {
   console.log(powerCalculator(100, 2));
 
 
-// #3
+// #3 ---- iterative runtime = linear   ----    recursive runtime = linear
 
 function reverseString(str) {
     let results = []
@@ -250,7 +250,7 @@ function reverseString(str) {
   reverseString('dog')
 
 
-// #4
+// #4 ---- iterative runtime = linear   ----    recursive runtime = linear
 
 function triangle(n) {
     let number = 0
@@ -261,7 +261,7 @@ function triangle(n) {
   }
   console.log(triangle(3))
 
-  // #5
+  // #5 ---- iterative runtime = linear?   ----    recursive runtime = linear
 
   function stringSplitter(str, separator) {
     let strArr = str.split(separator);
@@ -270,7 +270,7 @@ function triangle(n) {
   
   console.log(stringSplitter('02/07/1992', '/'));
 
-  // #6
+  // #6 ---- iterative runtime = linear   ----    recursive runtime = linear
 
   function fib(num) {
     let result = [];
@@ -291,7 +291,7 @@ function triangle(n) {
   
   console.log(fib(3))
 
-  // #7 
+  // #7 ---- iterative runtime = linear   ----    recursive runtime = polynomial
 
   function factorial(num) {
     let result = 1;
